@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+labs/*/data/
+# Звіти Ruff, збережені у файл
+ruff-report*.txt
+# Службові файли macOS
+.DS_Store
