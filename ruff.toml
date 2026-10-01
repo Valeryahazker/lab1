@@ -1,0 +1,25 @@
+# Налаштування Ruff для всіх лабораторних робіт репозиторію.
+line-length = 79          # PEP-8: не більше 79 символів у рядку
+target-version = "py39"   # код сумісний з Python 3.9+
+
+[lint]
+select = [
+    "E",    # pycodestyle: помилки стилю PEP-8
+    "W",    # pycodestyle: попередження (пробіли, довгі коментарі)
+    "F",    # Pyflakes: невикористані імпорти та змінні, помилки
+    "I",    # isort: порядок імпортів
+    "N",    # pep8-naming: правила іменування
+    "D",    # pydocstyle: наявність і формат docstring
+    "UP",   # pyupgrade: сучасний синтаксис Python
+    "B",    # flake8-bugbear: типові баги
+    "SIM",  # flake8-simplify: спрощення коду
+]
+ignore = [
+    "UP024",  # IOError лишаємо навмисно: його вимагає завдання
+]
+
+[lint.pycodestyle]
+max-doc-length = 72  # PEP-8: docstring і коментарі до 72 символів
+
+[lint.pydocstyle]
+convention = "pep257"
